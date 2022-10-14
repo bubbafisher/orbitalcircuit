@@ -12,7 +12,7 @@ public class Player : Ship
     private void Start()
     {
         base.rb = GetComponent<Rigidbody>();
-        turnVector = new Vector3(0, turning * 10, 0);
+        turnVector = new Vector3(0, handling * 10, 0);
     }
 
     void OnMove(InputValue movementValue)

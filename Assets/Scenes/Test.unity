@@ -509,11 +509,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 866880664}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6139676a2a8a71147aa9837255a0de90, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ea6a6d472126f34583a54e372bfd471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  turning: 40
+  handling: 40
+  weight: 0
+  health: 0
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1145444333
 GameObject:
   m_ObjectHideFlags: 0
