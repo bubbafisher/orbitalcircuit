@@ -28,8 +28,9 @@ public class Player : Ship
     // Update is called once per frame
     void FixedUpdate()
     {
+        Vector3 movePos = rb.transform.position - transform.position;
         Quaternion deltaRotation = Quaternion.Euler(direction.x * turnVector * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
-        rb.MovePosition(rb.position + transform.forward * direction.y * base.speed * Time.deltaTime);
+        rb.AddForce(movementY * transform.forward * 5);
     }
 }
