@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum PlanetType
 {
-    Planet, Star, Asteroid, BlackHole
+    Planet, Star, Moon, BlackHole
 }
 
 public class Planet : MonoBehaviour
