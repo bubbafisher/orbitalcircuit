@@ -12,14 +12,12 @@ public class Race : MonoBehaviour
     [Header("Race Settings")]
     [SerializeField]  private RaceType type;
     [SerializeField]  private int lapNumber, numOfOpponents;
-    [Header("Player Settings")]
-    [SerializeField] private GameObject playerPrefab;
-    protected GameObject player;
+    [SerializeField] private PlayerConstructor playerConstructor;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = Instantiate(playerPrefab);
+        playerConstructor.createPlayer();
     }
 
     // Update is called once per frame
