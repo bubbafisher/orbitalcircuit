@@ -11,7 +11,7 @@ public enum ShipType
 public class Ship : MonoBehaviour
 {
     [Range(1, 100)]
-    [SerializeField] protected int speed = 15, handling = 40, weight, health;
+    [SerializeField] protected int speed = 50, handling = 40, weight = 1000, health;
     [SerializeField] protected ShipType shipType;
     protected int gridPostion;
     protected float distanceToCelesitalBody;

@@ -31,6 +31,6 @@ public class Player : Ship
         Vector3 movePos = rb.transform.position - transform.position;
         Quaternion deltaRotation = Quaternion.Euler(direction.x * turnVector * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
-        rb.AddForce(movementY * transform.forward * 5);
+        rb.AddForce(movementY * transform.forward * speed);
     }
 }
