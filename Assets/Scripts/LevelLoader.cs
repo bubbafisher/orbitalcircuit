@@ -17,11 +17,14 @@ public class LevelLoader : MonoBehaviour
         }
 
 
+
     }
 public void LoadNextLevel(){
     StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex +1));
 }
-
+public void LoadGameScene1(){
+    SceneManager.LoadScene("GameScene");
+}
 IEnumerator LoadLevel (int levelIndex){
     transition.SetTrigger("Start");
     yield return new WaitForSeconds(transitionTime);
