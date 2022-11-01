@@ -45,7 +45,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6338834463080349111}
-  m_Mesh: {fileID: 638523861631414334, guid: 7caaf0ba83e07254dbdff1638edd18d1, type: 3}
+  m_Mesh: {fileID: 0}
 --- !u!23 &5546442615824047202
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -160,11 +160,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ea6a6d472126f34583a54e372bfd471, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  handling: 40
-  weight: 0
-  health: 0
   shipType: 0
+  shipLooks:
+  - {fileID: -39765208230148455, guid: d69c1a73778fb094cb4d81ba745f648d, type: 3}
+  - {fileID: -7046460113893408108, guid: 329fa5d7816ca8345b749d082d2918c2, type: 3}
+  - {fileID: -5364315057857720906, guid: 73986c9c36db5794eb3ff2bf613de956, type: 3}
+  - {fileID: 333540591600837703, guid: f03893cee48c246449ea78a04e5933e3, type: 3}
+  - {fileID: -4470695944010980263, guid: cec7e84fe0d6668498bb48c93c80c480, type: 3}
+  - {fileID: 9000081312944733210, guid: c5e12de1cf6ea5549bcffefa8f7e4f27, type: 3}
 --- !u!1 &6582162844841794547
 GameObject:
   m_ObjectHideFlags: 0
