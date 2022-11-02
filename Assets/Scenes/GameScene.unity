@@ -253,6 +253,30 @@ PrefabInstance:
       propertyPath: shipType
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1273736529087117459, guid: 8ca80831892ba5d4d856696187763550, type: 3}
+      propertyPath: shipLooks.Array.data[0]
+      value: 
+      objectReference: {fileID: 638523861631414334, guid: 7caaf0ba83e07254dbdff1638edd18d1, type: 3}
+    - target: {fileID: 1273736529087117459, guid: 8ca80831892ba5d4d856696187763550, type: 3}
+      propertyPath: shipLooks.Array.data[1]
+      value: 
+      objectReference: {fileID: 8140238591767863974, guid: 2431b45c981a54345a8661e0b50c5e4e, type: 3}
+    - target: {fileID: 1273736529087117459, guid: 8ca80831892ba5d4d856696187763550, type: 3}
+      propertyPath: shipLooks.Array.data[2]
+      value: 
+      objectReference: {fileID: 7086724536923379254, guid: 853369434adc60e47ab27ecbeac2bd10, type: 3}
+    - target: {fileID: 1273736529087117459, guid: 8ca80831892ba5d4d856696187763550, type: 3}
+      propertyPath: shipLooks.Array.data[3]
+      value: 
+      objectReference: {fileID: -4817186587062323912, guid: 90e2b7d795f813f44b4001b2d7a3d3dd, type: 3}
+    - target: {fileID: 1273736529087117459, guid: 8ca80831892ba5d4d856696187763550, type: 3}
+      propertyPath: shipLooks.Array.data[4]
+      value: 
+      objectReference: {fileID: -3378687254518668848, guid: 62eeeb40ca6bfe8459165a30566ccc04, type: 3}
+    - target: {fileID: 1273736529087117459, guid: 8ca80831892ba5d4d856696187763550, type: 3}
+      propertyPath: shipLooks.Array.data[5]
+      value: 
+      objectReference: {fileID: 1707599759859673837, guid: d4969d8a589b9a7429f4604c2bb05a24, type: 3}
     - target: {fileID: 6338834463080349111, guid: 8ca80831892ba5d4d856696187763550, type: 3}
       propertyPath: m_Name
       value: Player
