@@ -13,7 +13,7 @@ public class ShipStats : MonoBehaviour
 
     public static ShipStats[] ships =
     { 
-        new ShipStats(50, 40, 1000), //Sparrow
+        new ShipStats(25, 40, 1000), //Sparrow
         new ShipStats(50, 40, 1000), //Vester
         new ShipStats(50, 40, 1000), //Crusader
         new ShipStats(50, 40, 1000), //Neo
