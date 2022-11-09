@@ -8,7 +8,7 @@ public class Ship : MonoBehaviour
 {
     [SerializeField]
     protected ShipType shipType;
-    protected int speed = 50, handling = 40, weight = 1000, health;
+    protected int speed = 50, handling = 40, weight = 500, health;
     [SerializeField] protected Mesh[] shipLooks = new Mesh[6];
     private MeshFilter shipMesh;
     protected int gridPostion;

@@ -81,7 +81,7 @@ public class Planet : MonoBehaviour
     private float calculateGravity()
     {
         //Get variables for gravity formula
-        const float G = (float)6.67e-7; //G
+        const float G = (float)6.67e-6; //G
         float m1 = ship.GetComponent<Rigidbody>().mass; //Ship
         float m2 = (float)mass; //Planetary body
         float r = Vector3.Distance(this.gameObject.transform.position, ship.transform.position); //Distance
