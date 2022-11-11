@@ -15,10 +15,12 @@ public class Planet : MonoBehaviour
     private Transform tf;
     private bool pulling = false;
     private GameObject ship;
+    private LineRenderer line;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Set up Size
         tf = gameObject.transform;
         switch(type)
         {
@@ -45,6 +47,12 @@ public class Planet : MonoBehaviour
         }
         //Set size of planet if not already set
         tf.localScale = new Vector3(diameter, diameter, diameter);
+
+        //Set up gravity line
+        line = this.gameObject.AddComponent<LineRenderer>();
+        line.positionCount = 2;
+        line.startWidth = 0;
+        line.endWidth = 0;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -66,6 +74,9 @@ public class Planet : MonoBehaviour
             ship = null;
             pulling = false;
             print("No gravity.");
+
+            line.startWidth = 0;
+            line.endWidth = 0;
         }
     }
     public Vector3 pull()
@@ -91,11 +102,20 @@ public class Planet : MonoBehaviour
         return G * m1 * m2 / r;
     }
 
+    private void drawLine()
+    {
+        line.startWidth = 0.5f;
+        line.endWidth = 0.5f;
+        line.SetPosition(0, ship.transform.position);
+        line.SetPosition(1, this.gameObject.transform.position);
+    }
+
     private void FixedUpdate()
     {
         if (pulling)
         {
             ship.GetComponent<Rigidbody>().AddForce(pull(), ForceMode.Impulse); //Pull on ship
+            drawLine();
         }
     }
 }
