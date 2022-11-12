@@ -11,6 +11,7 @@ public class Ship : MonoBehaviour
     protected int speed = 50, handling = 40, weight = 500, health;
     [SerializeField] protected Mesh[] shipLooks = new Mesh[6];
     private MeshFilter shipMesh;
+    public MeshFilter doubleShipMesh;
     protected int gridPostion;
     protected float distanceToCelesitalBody;
     protected Rigidbody rb;
@@ -19,9 +20,11 @@ public class Ship : MonoBehaviour
     {
         ShipStats ship = ShipStats.ships[(int)shipType];
         shipMesh = gameObject.GetComponent<MeshFilter>();
+        //doubleShipMesh = gameObject.GetComponentInChildren<MeshFilter>();
         speed = ship.getSpeed();
         handling = ship.getHandling();
         weight = ship.getWeight();
         shipMesh.mesh = shipLooks[(int)shipType];
+        doubleShipMesh.mesh = shipMesh.mesh;
     }
 }
