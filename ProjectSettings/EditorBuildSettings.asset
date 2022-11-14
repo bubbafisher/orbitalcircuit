@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 867aba38ec38158419034818a998eb8b
   - enabled: 1
+    path: Assets/Scenes/Ship Selection.unity
+    guid: 9281288ed47e28d4d94be8461e1e60d6
+  - enabled: 1
+    path: Assets/Scenes/LevelSelection.unity
+    guid: fb34feddc67c05845b719c615f86463d
+  - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 120190ae30bb958448cc87952a27d543
   m_configObjects:
