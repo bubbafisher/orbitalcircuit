@@ -6,8 +6,7 @@ using UnityEngine.InputSystem;
 
 public class Ship : MonoBehaviour
 {
-    [SerializeField]
-    protected ShipType shipType;
+    protected int shipType;
     protected int speed = 50, handling = 40, weight = 500, health;
     [SerializeField] protected Mesh[] shipLooks = new Mesh[6];
     private MeshFilter shipMesh;
@@ -18,7 +17,7 @@ public class Ship : MonoBehaviour
 
     public void setShipStats()
     {
-        ShipStats ship = ShipStats.ships[(int)shipType];
+        ShipStats ship = ShipStats.ships[shipType];
         shipMesh = gameObject.GetComponent<MeshFilter>();
         //doubleShipMesh = gameObject.GetComponentInChildren<MeshFilter>();
         speed = ship.getSpeed();

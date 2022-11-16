@@ -11,6 +11,7 @@ public class Player : Ship
 
     private void Start()
     {
+        shipType = PlayerPrefs.GetInt("Ship");
         setShipStats();
         base.rb = GetComponent<Rigidbody>();
         turnVector = new Vector3(0, handling * 10, 0);
