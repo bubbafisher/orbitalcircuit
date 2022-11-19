@@ -104,8 +104,11 @@ public class Planet : MonoBehaviour
 
     private void drawLine()
     {
-        line.startWidth = 0.5f;
-        line.endWidth = 0.5f;
+        float width = 255f - Vector3.Distance(ship.transform.position, this.gameObject.transform.position);
+        line.startWidth = width/510;
+        line.endWidth = width/255;
+        line.startColor = Color.green;
+        line.endColor = Color.red;
         line.SetPosition(0, ship.transform.position);
         line.SetPosition(1, this.gameObject.transform.position);
     }
