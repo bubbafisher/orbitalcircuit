@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 
 public class Player : Ship
 {
+    public GameObject pauseMenu;
     private float movementX, movementY;
     private Vector2 direction;
     private Vector3 turnVector;
@@ -25,6 +26,20 @@ public class Player : Ship
         movementY = movementVector.y;
 
         direction = movementVector.normalized;
+    }
+
+    void OnPause()
+    {
+        if (pauseMenu.active)
+        {
+            Time.timeScale = 1;
+            pauseMenu.SetActive(false);
+        }
+        else
+        {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
     }
 
     // Update is called once per frame
