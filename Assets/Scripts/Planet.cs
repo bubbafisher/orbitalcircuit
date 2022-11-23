@@ -25,7 +25,7 @@ public class Planet : MonoBehaviour
         switch(type)
         {
             case PlanetType.Planet:
-                diameter = 65;
+                diameter = 100;
                 mass = 1.443e8;
                 volume = 20;
                 break;
@@ -92,7 +92,7 @@ public class Planet : MonoBehaviour
     private float calculateGravity()
     {
         //Get variables for gravity formula
-        const float G = (float)6.67e-6; //G
+        const float G = (float)9.67e-6; //G
         float m1 = ship.GetComponent<Rigidbody>().mass; //Ship
         float m2 = (float)mass; //Planetary body
         float r = Vector3.Distance(this.gameObject.transform.position, ship.transform.position); //Distance
