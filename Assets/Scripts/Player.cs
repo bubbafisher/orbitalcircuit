@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class Player : Ship
 {
     public GameObject pauseMenu;
-    private float movementX, movementY;
+    private float movementX, movementY, currentSpeed;
     private Vector2 direction;
-    private Vector3 turnVector;
+    private Vector3 turnVector, lastPosition;
+    [SerializeField]
+    private TMP_Text speedUI;
 
     private void Start()
     {
+        lastPosition = Vector3.zero;
         shipType = PlayerPrefs.GetInt("Ship");
         setShipStats();
         base.rb = GetComponent<Rigidbody>();
@@ -49,5 +53,13 @@ public class Player : Ship
         Quaternion deltaRotation = Quaternion.Euler(direction.x * turnVector * Time.deltaTime);
         rb.MoveRotation(rb.rotation * deltaRotation);
         rb.AddForce(movementY * transform.forward * speed);
+        speedUI.text = getSpeed().ToString();
+    }
+
+    public float getSpeed()
+    {
+        currentSpeed = Mathf.Round(Vector3.Distance(transform.position, lastPosition) * 100000f)/100f;
+        lastPosition = transform.position;
+        return currentSpeed;
     }
 }

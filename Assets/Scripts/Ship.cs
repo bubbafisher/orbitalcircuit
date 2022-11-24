@@ -11,7 +11,6 @@ public class Ship : MonoBehaviour
     [SerializeField] protected Mesh[] shipLooks = new Mesh[6];
     private MeshFilter shipMesh;
     public MeshFilter doubleShipMesh;
-    protected int gridPostion;
     protected float distanceToCelesitalBody;
     protected Rigidbody rb;
 
