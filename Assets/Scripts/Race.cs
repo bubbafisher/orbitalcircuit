@@ -36,6 +36,7 @@ public class Race : MonoBehaviour
     void Update()
     {
         timerGUI.text = System.Math.Round(Time.time - timeStart, 2).ToString();
+        print(waypointNum);
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -43,7 +44,7 @@ public class Race : MonoBehaviour
         {
             if (other == waypoints[waypointNum].GetComponent<Collider>())
             {
-                //print("Waypoint " + waypointNum);
+                print("Waypoint " + waypointNum);
                 waypointNum++;
             }
 
@@ -56,7 +57,7 @@ public class Race : MonoBehaviour
 
     void newLap()
     {
-        //print("New lap!");
+        print("New lap!");
         times[lapCounter] = Time.time - timeStart;
         if (++lapCounter >= lapNum)
         {

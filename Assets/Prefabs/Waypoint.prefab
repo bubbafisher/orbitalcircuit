@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4768562423635467362}
   - component: {fileID: 6393981633262455721}
   - component: {fileID: 35170362128816640}
-  - component: {fileID: 4296099799501132296}
+  - component: {fileID: 3365560624848768511}
   m_Layer: 0
   m_Name: group_0_14541540
   m_TagString: Untagged
@@ -84,22 +84,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!58 &4296099799501132296
-CircleCollider2D:
+--- !u!64 &3365560624848768511
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5706712907232374038}
-  m_Enabled: 1
-  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 50
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 5449574818879700426, guid: a2c4c8f2e6557fe46b23b7d7cf771fdf, type: 3}
 --- !u!1 &7719443558474584933
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,6 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6947692654972783071}
+  - component: {fileID: 8758314136660443582}
   m_Layer: 0
   m_Name: Waypoint
   m_TagString: Untagged
@@ -132,3 +131,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8758314136660443582
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7719443558474584933}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 14.65
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 5}

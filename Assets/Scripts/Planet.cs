@@ -98,7 +98,7 @@ public class Planet : MonoBehaviour
         float r = Vector3.Distance(this.gameObject.transform.position, ship.transform.position); //Distance
         r *= r; //r^2
         //Plug everything in
-        print("F =" + G + "(" + m1 + " * " + m2 + ") / " + r+"\nF = " + (G * m1 * m2 / r));
+        //print("F =" + G + "(" + m1 + " * " + m2 + ") / " + r+"\nF = " + (G * m1 * m2 / r));
         return G * m1 * m2 / r;
     }
 
