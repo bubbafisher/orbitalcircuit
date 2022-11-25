@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Ship : MonoBehaviour
 {
     protected int shipType;
-    protected int speed = 50, handling = 40, weight = 500, health;
+    protected int speed = 70, handling = 40, weight = 400, health;
     [SerializeField] protected Mesh[] shipLooks = new Mesh[6];
     private MeshFilter shipMesh;
     public MeshFilter doubleShipMesh;
