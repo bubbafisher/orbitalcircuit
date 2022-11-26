@@ -19,6 +19,7 @@ public class TrailToggler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //thrusters appear when one of the following held: W, S, UpArrow, DownArrow
         if (Input.GetKey(KeyCode.W))
         {
             trailL.SetActive(true);
@@ -28,7 +29,16 @@ public class TrailToggler : MonoBehaviour
         {
             trailL.SetActive(true);
             trailR.SetActive(true);
-
+        }
+        else if (Input.GetKey(KeyCode.UpArrow))
+        {
+            trailL.SetActive(true);
+            trailR.SetActive(true);
+        }
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
+            trailL.SetActive(true);
+            trailR.SetActive(true);
         }
         else
         {
