@@ -10,6 +10,8 @@ public class Player : Ship
     private float movementX, movementY, currentSpeed;
     private Vector2 direction;
     private Vector3 turnVector, lastPosition;
+    private float turnAccumulator = 0.002f;
+    const float TURN_INCREASE = 0.02f;
     [SerializeField]
     private TMP_Text speedUI;
 
@@ -19,7 +21,6 @@ public class Player : Ship
         shipType = PlayerPrefs.GetInt("Ship");
         setShipStats();
         base.rb = GetComponent<Rigidbody>();
-        turnVector = new Vector3(0, handling * 3, 0);
     }
 
     void OnMove(InputValue movementValue)
@@ -28,6 +29,8 @@ public class Player : Ship
 
         movementX = movementVector.x * -100;
         movementY = movementVector.y;
+        print("X:"+movementX);
+        print("Y:"+movementY);
 
         direction = movementVector.normalized;
     }
@@ -44,6 +47,15 @@ public class Player : Ship
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
         }
+    }
+
+    void Update()
+    {
+        turnVector = new Vector3(0, handling * turnAccumulator, 0);
+        if (movementX != 0)
+            turnAccumulator += TURN_INCREASE;
+        else
+            turnAccumulator = 1;
     }
 
     // Update is called once per frame
