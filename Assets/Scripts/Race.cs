@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class Race : MonoBehaviour
@@ -12,7 +13,9 @@ public class Race : MonoBehaviour
     private int lapNum = 3;
     private int lapCounter;
     [SerializeField]
-    private GameObject[] waypoints;
+    private GameObject[] waypoints, respawnPoints;
+    [SerializeField]
+    private Material waypointMaterial, targetWaypointMaterial;
     [Header("UI")]
     [SerializeField]
     private TMP_Text lapGUI;
@@ -53,6 +56,32 @@ public class Race : MonoBehaviour
                 newLap();
             }
         }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Respawn"))
+        {
+            GameObject w = respawnPoints[0];
+            for(int i = 0; i < waypointNum; i++)
+            {
+                foreach(GameObject r in respawnPoints)
+                {
+                    if (waypoints[i] == r)
+                        w = r;
+                }
+            }
+            StartCoroutine(respawn(w));
+        }
+    }
+
+    IEnumerator respawn(GameObject w)
+    {
+        player.GetComponent<PlayerInput>().enabled = false;
+        player.transform.position = w.transform.position;
+        player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        yield return new WaitForSeconds(1);
+        player.GetComponent<PlayerInput>().enabled = true;
     }
 
     void newLap()
