@@ -14,11 +14,11 @@ public class ShipStats : MonoBehaviour
     public static ShipStats[] ships =
     { 
         new ShipStats(25, 40, 1000), //Sparrow
-        new ShipStats(50, 40, 1000), //Vester
-        new ShipStats(50, 40, 1000), //Crusader
-        new ShipStats(50, 40, 1000), //Neo
-        new ShipStats(50, 40, 1000), //Algo
-        new ShipStats(50, 40, 1000) //Invader
+        new ShipStats(20, 33, 1100), //Vester
+        new ShipStats(27, 42, 850), //Crusader
+        new ShipStats(22, 45, 950), //Neo
+        new ShipStats(28, 35, 1000), //Algo
+        new ShipStats(30, 30, 1250) //Invader
     };
  
     public ShipStats(int s, int h, int w)
