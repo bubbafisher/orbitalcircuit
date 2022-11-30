@@ -53,7 +53,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hint: 
+  pauseDuringHint: 1
+  lastHint: 0
   tutorialText: {fileID: 0}
+  continueButton: {fileID: 0}
 --- !u!23 &6077189614800770623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -199,5 +202,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 20, y: 20, z: 20}
+  m_Size: {x: 40, y: 40, z: 40}
   m_Center: {x: -4.9960756, y: -3.5095117, z: 0}

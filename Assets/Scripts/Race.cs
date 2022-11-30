@@ -20,7 +20,7 @@ public class Race : MonoBehaviour
     [SerializeField]
     private TMP_Text lapGUI;
     [SerializeField]
-    private TMP_Text timerGUI;
+    private TMP_Text timerGUI, resultsText;
     public GameObject gameOverScreen;
 
     private float timeStart;
@@ -103,11 +103,11 @@ public class Race : MonoBehaviour
     void raceOver()
     {
         string timeStr = "";
-            for (int i = 0; i < times.Length; i++)
-            {
-                timeStr += "Lap " + (i + 1) + ": " + System.Math.Round(times[i], 2) + "\n";
-                //print(times);
-            }
-            gameOverScreen.SetActive(true);
+        for (int i = 0; i < times.Length-1; i++)
+        {
+            timeStr += "Lap " + (i + 1) + ": " + System.Math.Round(times[i], 2) + "\n";
+        }
+        resultsText.text = timeStr;
+        gameOverScreen.SetActive(true);
     }
 }

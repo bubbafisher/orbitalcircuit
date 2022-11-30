@@ -9,7 +9,7 @@ public class Tutorial : MonoBehaviour
     [TextArea(1,3)]
     private string hint;
     [SerializeField]
-    private bool pauseDuringHint = true;
+    private bool pauseDuringHint = true, lastHint = false;
     [SerializeField]
     private TMP_Text tutorialText;
     [SerializeField]
@@ -24,6 +24,8 @@ public class Tutorial : MonoBehaviour
                 Time.timeScale = 0;
                 continueButton.SetActive(true);
             }
+            if (lastHint)
+                tutorialText.enabled = false;
             Destroy(this.gameObject);
         }
     }
