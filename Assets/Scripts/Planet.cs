@@ -25,13 +25,13 @@ public class Planet : MonoBehaviour
         switch(type)
         {
             case PlanetType.Planet:
-                diameter = 100;
+                diameter = gameObject.transform.localScale.x;
                 mass = 1.443e8;
                 volume = 20;
                 break;
             case PlanetType.Star:
-                diameter = 200;
-                mass = 1.072e9;
+                diameter = 370;
+                mass = 1.072e10;
                 volume = 20;
                 break;
             case PlanetType.Moon:

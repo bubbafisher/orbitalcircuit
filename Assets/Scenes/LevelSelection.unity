@@ -807,7 +807,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 354952538}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 874245266}
+        m_TargetAssemblyTypeName: SelectGameLevel, Assembly-CSharp
+        m_MethodName: Level2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
 --- !u!114 &354952538
 MonoBehaviour:
   m_ObjectHideFlags: 0
