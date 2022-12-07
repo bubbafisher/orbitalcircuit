@@ -17,7 +17,11 @@ public class DontDestroyBGAudio : MonoBehaviour
         {
             Destroy(transform.gameObject);
         }
-        if (SceneManager.GetActiveScene().name.Equals("GameScene2"))
+        else if (SceneManager.GetActiveScene().name.Equals("GameSceneNoTutorial"))
+        {
+            Destroy(transform.gameObject);
+        }
+        else if (SceneManager.GetActiveScene().name.Equals("GameSceneSandbox"))
         {
             Destroy(transform.gameObject);
         }
